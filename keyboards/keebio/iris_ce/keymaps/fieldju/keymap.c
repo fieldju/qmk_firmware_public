@@ -4,8 +4,8 @@
 #include QMK_KEYBOARD_H
 
 enum custom_keycodes {
-    SIRI = SAFE_RANGE,
-    MAC_LOCK,
+    DICTION = SAFE_RANGE,
+    MAC_LOCK
 };
 
 enum custom_layers {
@@ -74,18 +74,18 @@ enum custom_layers {
 #define MKC_UND LGUI(KC_Z)
 #define MKC_BLD LGUI(KC_B)
 #define MKC_SPT LGUI(KC_SPC)
-#define MKC_SW1 LCTL(KC_1)
-#define MKC_SW2 LCTL(KC_2)
-#define MKC_SW3 LCTL(KC_3)
-#define MKC_SW4 LCTL(KC_4)
-#define MKC_SW5 LCTL(KC_5)
-#define MKC_SW6 LCTL(KC_6)
-#define MKC_SW7 LCTL(KC_7)
-#define MKC_SW8 LCTL(KC_8)
-#define MKC_SW9 LCTL(KC_9)
-#define MKC_SW0 LCTL(KC_0)
-#define MKC_SWN LCTL(KC_RGHT)
-#define MKC_SWP LCTL(KC_LEFT)
+#define MKC_SW1 HYPR(KC_1)
+#define MKC_SW2 HYPR(KC_2)
+#define MKC_SW3 HYPR(KC_3)
+#define MKC_SW4 HYPR(KC_4)
+#define MKC_SW5 HYPR(KC_5)
+#define MKC_SW6 HYPR(KC_6)
+#define MKC_SW7 HYPR(KC_7)
+#define MKC_SW8 HYPR(KC_8)
+#define MKC_SW9 HYPR(KC_9)
+#define MKC_SW0 HYPR(KC_0)
+#define MKC_SWN HYPR(KC_RGHT)
+#define MKC_SWP HYPR(KC_LEFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LGUI, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT,          KC_LCTL, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT,          KC_LCTL, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_QUOT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     TL_UPPR, TL_LOWR, MO(FN),                    KC_SPC,  TL_UPPR, TL_LOWR
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -109,9 +109,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TILD, KC_UNDS, KC_EQL,  KC_PLUS, KC_MINS, KC_LBRC,                            KC_RBRC, KC_LCBR, KC_RCBR, KC_BSLS, KC_PIPE, KC_QUOT,
+     KC_TILD, KC_UNDS, KC_EQL,  KC_PLUS, KC_MINS, KC_LBRC,                            KC_RBRC, KC_LCBR, KC_RCBR, KC_BSLS, _______, KC_PIPE,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, _______, _______, _______, _______, _______,          SCR_CEN, SCR_F13, SCR_R23, SCR_LHF, SCR_RHF, _______, CTX_ACT,
+     _______, _______, _______, _______, _______, _______, _______,          SCR_CEN, SCR_F13, SCR_R23, SCR_LHF, SCR_RHF, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     _______, _______, HYPER_FN,                  _______, _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -121,9 +121,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_GRV,  MKC_SW1, MKC_SW2, MKC_SW3, MKC_SW4, MKC_SW5,                            MKC_SW6, MKC_SW7, MKC_SW8, MKC_SW9, MKC_SW0, MAC_LOCK,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, CAPTURE, END_LN,  RV_SRCH, _______,                            _______, _______, _______, _______, _______, _______,
+     MKC_SWP, MKC_SWN, CAPTURE, END_LN,  RV_SRCH, _______,                            _______, STRT_LN, CLONE_U, END_LN, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_GRV,  STRT_LN, SCRNSHT, KC_EOF,  MKC_SWP, MKC_SWN,                            SPLIT_H, _______, _______, CLEAR,   _______, KC_DQUO,
+     KC_GRV,  STRT_LN, SCRNSHT, KC_EOF,  _______, _______,                            SPLIT_H, _______, CLONE_D, CLEAR,   _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      CW_TOGG, _______, _______, INTRUPT, SPLIT_V, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
@@ -133,13 +133,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [FN] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_GRV,  OPEN,    _______, CLOSE_T, _______, DEBUG,                              _______, KC_HOME, _______, KC_END, _______,  LAST_ED,
+     KC_GRV,  OPEN,    _______, CLOSE_T, _______, DEBUG,                              _______, _______, _______, _______, _______, LAST_ED,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LCTL, USAGES,  GO_IMPL, GO_DECL, RENAME,  TERM,                               _______, STRT_LN, KC_UP,   END_LN,  KC_PGUP, _______,
+     _______, USAGES,  GO_IMPL, GO_DECL, RENAME,  TERM,                               _______, KC_HOME, KC_UP,   KC_END,  KC_PGUP, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, SUROUND, NAVBACK, NAVFRWD, GIT,                                KC_TLBX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, CTX_ACT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, MKC_UND, MKC_CUT, MKC_CPY, MKC_PST, MKC_BLD, _______,          _______, GENERAT, SIRI,    LAST_ED, NAVBACK, NAVFRWD,  _______,
+     _______, MKC_UND, MKC_CUT, MKC_CPY, MKC_PST, MKC_BLD, _______,          _______, GENERAT, DICTION,    LAST_ED, NAVBACK, NAVFRWD,  _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_MEH,  KC_HYPR, _______,                   MKC_SPT, _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -151,7 +151,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, _______, _______, REAFACT, _______,                            _______, _______, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, CAPTURE, KC_EOF,  SCRATCH, _______,                            _______, _______, _______, _______, _______, _______,
+     _______, _______, CAPTURE, _______, SCRATCH, _______,                            _______, _______, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_CAPS, _______, _______, TG_CASE, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
@@ -162,18 +162,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case SIRI:
+        case DICTION:
             if (record->event.pressed) {
-                host_system_send(0xCF);
+                host_consumer_send(0xCF);
             } else {
-                host_system_send(0);
+                host_consumer_send(0);
             }
+            return false;
         case MAC_LOCK:
             if (record->event.pressed) {
-                host_system_send(0x19E);
+                host_consumer_send(0x19E);
             } else {
-                host_system_send(0);
+                host_consumer_send(0);
             }
+            return false;
     }
     return true;
 }

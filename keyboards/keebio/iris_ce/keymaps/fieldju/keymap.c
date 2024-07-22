@@ -43,9 +43,10 @@ enum custom_layers {
 #define NAV_PFN LSFT(LCTL(KC_UP))
 #define SUROUND LGUI(LALT(KC_T))
 #define KC_TLBX LALT(LGUI(LCTL(LSFT(KC_H)))) // Jetbrain Tool box
-#define GO_DECL LGUI(KC_B)
-#define GO_IMPL LGUI(LALT(KC_B))
+#define GO_DECL LGUI(KC_B) // HOLD lat to goto impl
 #define USAGES  LALT(KC_F7)
+#define EXP_SEL LALT(KC_UP)
+#define DEC_SEL LALT(KC_DOWN)
 
 // Layers
 #define HYPER_FN LM(FN, MOD_HYPR) // MO Layer FN with HYPER
@@ -65,7 +66,7 @@ enum custom_layers {
 #define DEL_RHT LCTL(KC_K)
 #define OS_SHFT OSM(MOD_LSFT)
 #define KC_LCAG LCTL(LALT(KC_LGUI))
-#define SFT_QT  MT(MOD_RSFT, KC_QUOT)
+#define SFT_QT  MT(MOD_RSFT, KC_QUOT) // hold shift, tap for quotes
 
 // Compile Firmware
 #define SEND_IT LCTL(KC_LSFT)
@@ -139,11 +140,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_GRV,  OPEN,    _______, CLOSE_T, _______, DEBUG,                              _______, _______, _______, _______, _______, KC_DEL,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, GO_IMPL, GO_DECL, RENAME,  TERM,                               KC_HOME, STRT_LN, KC_UP,   END_LN,  KC_PGUP, _______,
+     _______, _______, DEC_SEL, EXP_SEL, RENAME,  TERM,                               KC_HOME, STRT_LN, KC_UP,   END_LN,  KC_PGUP, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, SUROUND, MKC_SWP, MKC_SWN, GIT,                                KC_END,  KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, CTX_ACT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, MKC_UND, MKC_CUT, MKC_CPY, MKC_PST, MKC_BLD, _______,          KC_TLBX, GENERAT, LAST_ED, NAVBACK, NAVFRWD, NAV_PFN, NAV_NFN,
+     _______, MKC_UND, MKC_CUT, MKC_CPY, MKC_PST, MKC_BLD, _______,          GO_DECL, GENERAT, LAST_ED, NAVBACK, NAVFRWD, NAV_PFN, NAV_NFN,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_MEH,  KC_HYPR, _______,                   KC_CTX,  _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -169,7 +170,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      CLR_LCK, _______, CG_TOGG, _______, REAFACT, _______,                            _______, USAGES,  _______, _______, OSL(P),  _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     QK_LOCK, _______, CAPTURE, DICTION, SCRATCH, _______,                            _______, _______, _______, MAC_LOCK,_______, _______,
+     QK_LOCK, _______, CAPTURE, DICTION, SCRATCH, _______,                            KC_TLBX, _______, _______, MAC_LOCK,_______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_CAPS, _______, _______, TG_CASE, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘

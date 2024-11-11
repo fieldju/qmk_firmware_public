@@ -39,8 +39,10 @@ enum custom_layers {
 #define OPEN LALT(KC_F1)
 #define SCRATCH LGUI(LSFT(KC_N))
 #define CTX_ACT LALT(KC_ENTER)
-#define NAVBACK HYPR(KC_LEFT)
-#define NAVFRWD HYPR(KC_RGHT)
+//#define NAVBACK HYPR(KC_LEFT)
+//#define NAVFRWD HYPR(KC_RGHT)
+#define NAVBACK LGUI(KC_LBRC)
+#define NAVFRWD LGUI(KC_RBRC)
 #define NAV_NFN LSFT(LCTL(KC_DOWN))
 #define NAV_PFN LSFT(LCTL(KC_UP))
 #define SUROUND LGUI(LALT(KC_T))
@@ -71,7 +73,6 @@ enum custom_layers {
 #define DEL_RHT LCTL(KC_K)
 #define OS_SHFT OSM(MOD_LSFT)
 #define KC_LCAG LCTL(LALT(KC_LGUI))
-#define SFT_QT  MT(MOD_RSFT, KC_QUOT) // hold shift, tap for quotes
 
 // Compile Firmware
 #define SEND_IT LCTL(KC_LSFT)
@@ -108,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LGUI, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT,          RECENT,  KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, SFT_QT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT,          RECENT,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_QUOT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     TL_UPPR, TL_LOWR, TT(FN),                    KC_SPC,  KC_LCTL, TL_UPPR
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -150,7 +151,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, SUROUND, _______, SCRATCH, _______,                            _______, NAVBACK, LAST_ED, NAVFRWD, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, _______, TG_CASE, _______, _______, _______,          _______, _______, _______, KC_MPRV, KC_MNXT, KC_VOLU, KC_VOLD,
+     CW_TOGG, _______, _______, TG_CASE, _______, _______, _______,          _______, _______, _______, KC_MPRV, KC_MNXT, KC_VOLU, KC_VOLD,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     _______, _______, MEH_FN,                    KC_MPLY, _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘

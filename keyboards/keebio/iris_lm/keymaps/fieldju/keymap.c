@@ -57,6 +57,7 @@ enum custom_layers {
 #define DEL_LN  LGUI(LCTL(KC_DEL))
 #define BPSYNC  LALT(KC_P)
 #define BFSYNC  LALT(LCTL(KC_P))
+#define AIRCHAT LALT(LCTL(KC_A))
 
 // Layers
 #define HYPER_FN LM(FN, MOD_HYPR) // MO Layer FN with HYPER
@@ -153,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      _______, _______, CLOSE_T, _______, RECENT,  _______,                            _______, USAGES,  _______, _______, BPSYNC,  _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, BFSYNC,  _______, SCRATCH, SUROUND,                            _______, NAVBACK, LAST_ED, NAVFRWD, _______, _______,
+     _______, AIRCHAT, BFSYNC,  _______, SCRATCH, SUROUND,                            _______, NAVBACK, LAST_ED, NAVFRWD, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      CW_TOGG, _______, _______, TG_CASE, _______, _______, _______,          KC_MPLY, _______, KC_MPLY, KC_MPRV, KC_MNXT, KC_VOLU, KC_VOLD,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘

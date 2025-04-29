@@ -40,8 +40,6 @@ enum custom_layers {
 #define OPEN LALT(KC_F1)
 #define SCRATCH LGUI(LSFT(KC_N))
 #define CTX_ACT LALT(KC_ENTER)
-//#define NAVBACK HYPR(KC_LEFT)
-//#define NAVFRWD HYPR(KC_RGHT)
 #define NAVBACK LGUI(KC_LBRC)
 #define NAVFRWD LGUI(KC_RBRC)
 #define NAV_NFN LSFT(LCTL(KC_DOWN))
@@ -55,9 +53,12 @@ enum custom_layers {
 #define DEC_SEL HYPR(KC_9)
 #define RECENT  LGUI(KC_E)
 #define DEL_LN  LGUI(LCTL(KC_DEL))
-#define BPSYNC  LALT(KC_P)
-#define BFSYNC  LALT(LCTL(KC_P))
 #define AIRCHAT LALT(LCTL(KC_A))
+// IDE Ace Jump https://plugins.jetbrains.com/plugin/7086-acejump
+#define AJ_CFWD  LGUI(KC_SCLN)
+#define AJ_CBCK  HYPR(KC_SCLN)
+#define AJ_TRGT  LALT(LGUI(KC_SCLN))
+#define AJ_LINE  LALT(LSFT(KC_SCLN))
 
 // Layers
 #define HYPER_FN LM(FN, MOD_HYPR) // MO Layer FN with HYPER
@@ -136,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [FN] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     KC_GRV,  OPEN,    _______, CLOSE_T, _______, DEBUG,                              _______, _______, _______, _______, _______, _______,
+     KC_GRV,  OPEN,    _______, _______, _______, DEBUG,                              _______, _______, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCAG, _______, DEC_SEL, EXP_SEL, RENAME,  TERM,                               _______, STRT_LN, KC_UP,   END_LN,  KC_PGUP, KC_HOME,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -152,9 +153,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      CG_TOGG, MKC_SW1, MKC_SW2, MKC_SW3, MKC_SW4, MKC_SW5,                            MKC_SW6, MKC_SW7, MKC_SW8, MKC_SW9, MKC_SW0, DEL_LFT,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, CLOSE_T, _______, RECENT,  _______,                            _______, USAGES,  _______, _______, BPSYNC,  DEL_RHT,
+     _______, _______, CLOSE_T, _______, RECENT,  _______,                            _______, USAGES,  _______, _______, _______,  DEL_RHT,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, AIRCHAT, BFSYNC,  _______, SCRATCH, SUROUND,                            _______, NAVBACK, LAST_ED, NAVFRWD, _______, _______,
+     _______, AIRCHAT, AJ_TRGT, AJ_CBCK, AJ_CFWD, AJ_LINE,                            SCRATCH, SUROUND, _______, _______, _______, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      CW_TOGG, _______, _______, TG_CASE, _______, _______, _______,          KC_MPLY, _______, KC_MPLY, KC_MPRV, KC_MNXT, KC_VOLU, KC_VOLD,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘

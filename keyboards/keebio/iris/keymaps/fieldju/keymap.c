@@ -34,7 +34,7 @@ enum custom_layers {
 #define RENAME  LSFT(KC_F6)
 #define REAFACT LCTL(KC_T)
 #define TERM    LALT(KC_F12)
-#define GIT     LGUI(KC_9)
+#define COMMIT  LGUI(KC_0)
 #define DEBUG   LGUI(KC_5)
 #define TG_CASE LALT(LSFT(KC_U))
 #define GENERAT LGUI(KC_N)
@@ -177,7 +177,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCAG, _______, DEC_SEL, EXP_SEL, RENAME,  TERM,                               _______, STRT_LN, KC_UP,   END_LN,  KC_PGUP, KC_HOME,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, SCRNSHT, MKC_SWP, MKC_SWN, GIT,                                KC_TLBX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_END,
+     _______, _______, SCRNSHT, MKC_SWP, MKC_SWN, COMMIT,                             KC_TLBX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_END,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, MKC_UND, MKC_CUT, MKC_CPY, MKC_PST, MKC_BLD, _______,          DICTION, GENERAT, LAST_ED, NAVBACK, NAVFRWD, _______, GO_DECL,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘

@@ -20,7 +20,7 @@ define EXEC_DFU_UTIL
 		done ;\
 		printf "\n" ;\
 	fi
-	$(DFU_UTIL) $(DFU_ARGS) -D $(BUILD_DIR)/$(TARGET).bin
+	$(DFU_UTIL) $(DFU_ARGS) -D $(BUILD_DIR)/$(TARGET).bin; DFU_RET=$$?; if [ $$DFU_RET -eq 74 ]; then exit 0; else exit $$DFU_RET; fi
 endef
 
 WB32_DFU_UPDATER ?= wb32-dfu-updater_cli

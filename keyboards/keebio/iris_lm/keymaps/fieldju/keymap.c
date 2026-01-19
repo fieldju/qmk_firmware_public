@@ -130,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCAG, _______, DEC_SEL, EXP_SEL, RENAME,  TERM,                               _______, STRT_LN, KC_UP,   END_LN,  KC_PGUP, KC_HOME,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, SCRNSHT, MKC_SWP, MKC_SWN, GIT,                                KC_TLBX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_END,
+     _______, _______, SCRNSHT, MKC_SWP, MKC_SWN, CC_GIT,                             KC_TLBX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_END,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, CC_UNDO, CC_CUT,  CC_COPY, CC_PASTE,MKC_BLD, _______,          DICTION, GENERAT, LAST_ED, NAVBACK, NAVFRWD, _______, GO_DECL,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
